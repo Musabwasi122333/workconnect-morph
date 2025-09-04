@@ -2,132 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Neuromorphic Design System - All colors MUST be HSL */
-
 @layer base {
   :root {
-    /* Neuromorphic Background System */
-    --background: 220 10% 94%;
-    --background-elevated: 220 15% 96%;
-    --foreground: 220 20% 15%;
-
-    /* Neuromorphic Surface System */
-    --surface: 220 10% 94%;
-    --surface-elevated: 220 15% 96%;
-    --surface-pressed: 220 8% 90%;
-    
-    /* Neuromorphic Shadow System */
-    --shadow-light: 0 0% 100%;
-    --shadow-dark: 220 15% 82%;
-    --shadow-darker: 220 20% 75%;
-    
-    /* Brand Colors */
-    --primary: 258 100% 65%;
-    --primary-foreground: 0 0% 98%;
-    --primary-gradient: linear-gradient(135deg, hsl(258 100% 65%), hsl(280 85% 70%));
-    
-    --secondary: 220 10% 94%;
-    --secondary-foreground: 220 20% 15%;
-    
-    --accent: 200 100% 70%;
-    --accent-foreground: 0 0% 98%;
-    --accent-gradient: linear-gradient(135deg, hsl(200 100% 70%), hsl(220 90% 75%));
-
-    /* Neuromorphic Interactive States */
-    --muted: 220 8% 88%;
-    --muted-foreground: 220 15% 40%;
-    
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 98%;
-    
-    --warning: 48 96% 53%;
-    --warning-foreground: 220 20% 15%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    /* Neuromorphic Borders and Inputs */
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 258 100% 65%;
-
-    /* Card and Popover (reuse surface colors) */
-    --card: 220 10% 94%;
-    --card-foreground: 220 20% 15%;
-    --popover: 220 15% 96%;
-    --popover-foreground: 220 20% 15%;
-
-    /* Neuromorphic Shadows */
-    --shadow-neuro: 6px 6px 12px hsl(var(--shadow-dark)), 
-                   -6px -6px 12px hsl(var(--shadow-light));
-    --shadow-neuro-pressed: inset 4px 4px 8px hsl(var(--shadow-dark)), 
-                           inset -4px -4px 8px hsl(var(--shadow-light));
-    --shadow-neuro-soft: 3px 3px 6px hsl(var(--shadow-dark)), 
-                        -3px -3px 6px hsl(var(--shadow-light));
-    
-    /* Glass Effects */
-    --glass-bg: hsla(220, 15%, 96%, 0.7);
-    --glass-border: hsla(220, 20%, 80%, 0.3);
-    
-    /* Animations */
-    --transition-neuro: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s ease-out;
-
-    --radius: 1rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -135,74 +53,7 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer components {
-  /* Neuromorphic Components */
-  .neuro-surface {
-    @apply bg-surface rounded-2xl;
-    box-shadow: var(--shadow-neuro);
-    transition: var(--transition-neuro);
-  }
-  
-  .neuro-surface-pressed {
-    @apply bg-surface-pressed;
-    box-shadow: var(--shadow-neuro-pressed);
-  }
-  
-  .neuro-surface-soft {
-    @apply bg-surface rounded-xl;
-    box-shadow: var(--shadow-neuro-soft);
-    transition: var(--transition-fast);
-  }
-  
-  .neuro-button {
-    @apply neuro-surface px-6 py-3 font-medium cursor-pointer;
-  }
-  
-  .neuro-button:hover {
-    @apply neuro-surface-pressed;
-    transform: translateY(1px);
-  }
-  
-  .neuro-button:active {
-    @apply neuro-surface-pressed;
-    transform: translateY(2px);
-  }
-  
-  .glass-surface {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-  
-  .gradient-text {
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .floating-element {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-  }
-  
-  .hover-lift {
-    transition: var(--transition-neuro);
-  }
-  
-  .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-neuro), 0 8px 25px hsla(220, 20%, 75%, 0.4);
   }
 }
